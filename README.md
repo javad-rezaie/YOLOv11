@@ -42,36 +42,29 @@ make docker-build-paddle
 On my local computer, the data structure is as follows:
 
 /mnt/SSD2/General_CV_Training_Data/Apple_Leaf_Disease/coco/coco/
+├── train/
+├── val/
+├── test/
+└── annotations/
+    ├── train.json
+    ├── val.json
+    └── test.json
 
-                                                        ├── train/
-
-                                                        ├── val/
-
-                                                        ├── test/
-
-                                                        ├── annotations/train.json
-
-                                                        ├── annotations/val.json
-
-                                                        └── annotations/test.json
 
 
 #### Container
 
 Within the container, this directory is accessible as `/data` and will appear as:
 
-/data/ 
-        ├── train/
+/data/
+├── train/
+├── val/
+├── test/
+└── annotations/
+    ├── train.json
+    ├── val.json
+    └── test.json
 
-        ├── val/
-
-        ├── test/
-
-        ├── annotations/train.json
-
-        ├── annotations/val.json
-
-        └── annotations/test.json
 
 
 The local path `/mnt/SSD2/General_CV_Training_Data/Apple_Leaf_Disease/coco/coco/` is mapped to `/data/` inside the container.
